@@ -49,6 +49,7 @@
     /SCORE message
     <string name="youGot">You got </string>
     <string name="pointsoutof">points out of 5.\n</string>
+    <string name="score1">Your score: </string>
 
 
 </resources>

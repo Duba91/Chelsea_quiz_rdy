@@ -1,100 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
 
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
         android:paddingBottom="5dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
+
         android:paddingTop="10dp">
 
-     <TextView
-         android:id="@+id/welcome"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:gravity="center"
+        <LinearLayout
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back"
 
+            android:gravity="center"
+            android:orientation="vertical">
 
-         android:text="@string/welcome"
-         android:textSize="30dp"/>
-      <ImageView
-          android:id="@+id/logo"
-          android:layout_width="200dp"
-          android:layout_height="200dp"
-          android:layout_below="@+id/welcome"
-          android:layout_centerHorizontal="true"
+            <TextView
 
-          android:src="@drawable/chelseabackground" />
-       <TextView
-           android:id="@+id/question"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:layout_below="@+id/logo"
-           android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
 
-           android:text="@string/question"
-           android:textSize="20dp"/>
+                android:text="@string/welcome"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:layout_centerHorizontal="true"
+
+                android:src="@drawable/chelseabackground" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+
+                android:text="@string/question"
+                android:textSize="20dp" />
+        </LinearLayout>
 
         <!--pytanie 1-->
         <LinearLayout
             android:id="@+id/quest1answer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/question"
+            android:layout_below="@+id/welcome"
             android:background="@drawable/back"
             android:orientation="vertical"
             android:paddingTop="15dp">
 
-        <TextView
-            android:id="@+id/pytanie1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/question"
+            <TextView
+                android:id="@+id/pytanie1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/question"
 
-            android:gravity="left"
-            android:paddingLeft="10dp"
-            android:paddingTop="20dp"
-            android:text="@string/question1"
-            android:textSize="15dp"
-             />
-        <RadioGroup
-            android:id="@+id/pytanie1odp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/pytanie1"
-            android:orientation="horizontal"
-            android:paddingTop="20dp">
-            <RadioButton
-                android:id="@+id/pytanie1odp1"
-                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="@string/question1"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:id="@+id/pytanie1odp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/quest1_answ1"
-                />
-            <RadioButton
-                android:id="@+id/pytanie1odp2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest1_answ2"
-               />
-            <RadioButton
-                android:id="@+id/pytanie1odp3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest1_answ3"
-                />
-            <RadioButton
-                android:id="@+id/pytanie1odp4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest1_answ4"
-                />
-        </RadioGroup>
+                android:layout_below="@+id/pytanie1"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/pytanie1odp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest1_answ1" />
+
+                <RadioButton
+                    android:id="@+id/pytanie1odp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest1_answ2" />
+
+                <RadioButton
+                    android:id="@+id/pytanie1odp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest1_answ3" />
+
+                <RadioButton
+                    android:id="@+id/pytanie1odp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest1_answ4" />
+            </RadioGroup>
         </LinearLayout>
 
         <!--pytanie 2-->
@@ -107,48 +121,52 @@
             android:orientation="vertical"
             android:paddingTop="15dp">
 
-        <TextView
-            android:id="@+id/pytanie2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/pytanie1odp"
+            <TextView
+                android:id="@+id/pytanie2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pytanie1odp"
 
-            android:gravity="left"
-            android:paddingLeft="10dp"
-            android:paddingTop="20dp"
-            android:text="@string/question2"
-            android:textSize="15dp"/>
-        <LinearLayout
-            android:id="@+id/pytanie2odp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/pytanie2"
-            android:orientation="vertical"
-            android:paddingTop="15dp">
-          <CheckBox
-              android:id="@+id/checkBox1"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="@string/quest2_answ1"/>
-            <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest2_answ2"/>
-            <CheckBox
-                android:id="@+id/checkBox3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest2_answ3"/>
-            <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest2_answ4"/>
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="@string/question2"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:id="@+id/pytanie2odp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pytanie2"
+                android:orientation="vertical"
+                android:paddingTop="15dp">
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest2_answ1" />
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest2_answ2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest2_answ3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest2_answ4" />
 
 
-
-        </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
         <!--pytanie 3-->
         <LinearLayout
@@ -160,28 +178,29 @@
             android:orientation="vertical"
             android:paddingTop="15dp">
 
-        <TextView
-            android:id="@+id/pytanie3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/pytanie2odp"
+            <TextView
+                android:id="@+id/pytanie3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pytanie2odp"
 
-            android:gravity="left"
-            android:paddingLeft="10dp"
-            android:paddingTop="20dp"
-            android:text="@string/question3"
-            android:textSize="15dp"/>
-        <EditText
-            android:id="@+id/pytanie3odp"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/pytanie3"
-            android:paddingLeft="10dp"
-            android:paddingTop="20dp"
-            android:text="@string/quest3_answer" />
-            </LinearLayout>
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="@string/question3"
+                android:textSize="15dp" />
 
-         <!--Pytanie 4  -->
+            <EditText
+                android:id="@+id/pytanie3odp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pytanie3"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="@string/quest3_answer" />
+        </LinearLayout>
+
+        <!--Pytanie 4  -->
         <LinearLayout
             android:id="@+id/quest4answer"
             android:layout_width="match_parent"
@@ -191,37 +210,40 @@
             android:orientation="vertical"
             android:paddingTop="15dp">
 
-        <TextView
-            android:id="@+id/pytanie4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/pytanie3odp"
-            android:gravity="left"
-            android:paddingLeft="10dp"
-            android:paddingTop="20dp"
-            android:text="@string/question4"
-            android:textSize="15dp"/>
-        <RadioGroup
-            android:id="@+id/pytanie4odp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/pytanie4"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingTop="20dp">
-            <RadioButton
-                android:id="@+id/pytanie4odp1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest4_answ1"/>
-            <RadioButton
-                android:id="@+id/pytanie4odp2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest4_answ2"/>
+            <TextView
+                android:id="@+id/pytanie4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pytanie3odp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="@string/question4"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:id="@+id/pytanie4odp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pytanie4"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/pytanie4odp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest4_answ1" />
+
+                <RadioButton
+                    android:id="@+id/pytanie4odp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest4_answ2" />
 
 
-        </RadioGroup>
+            </RadioGroup>
         </LinearLayout>
 
 
@@ -234,66 +256,80 @@
             android:background="@drawable/back"
             android:orientation="vertical"
             android:paddingTop="15dp">
-        <TextView
-        android:id="@+id/pytanie5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/quest4answer"
 
-        android:gravity="left"
-        android:paddingLeft="10dp"
-        android:paddingTop="20dp"
-        android:text="@string/question5"
-        android:textSize="15dp"/>
-        <RadioGroup
-            android:id="@+id/pytanie5odp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/pytanie5"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingTop="20dp">
-        <RadioButton
-            android:id="@+id/pytanie5odp1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/quest5_answ1"/>
-        <RadioButton
-            android:id="@+id/pytanie5odp2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/quest5_answ2"/>
-            <RadioButton
-                android:id="@+id/pytanie5odp3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quest5_answ3"/>
+            <TextView
+                android:id="@+id/pytanie5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/quest4answer"
 
-        </RadioGroup>
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="@string/question5"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:id="@+id/pytanie5odp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pytanie5"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/pytanie5odp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest5_answ1" />
+
+                <RadioButton
+                    android:id="@+id/pytanie5odp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest5_answ2" />
+
+                <RadioButton
+                    android:id="@+id/pytanie5odp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quest5_answ3" />
+
+            </RadioGroup>
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/quest5answer"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text=""
+            android:textSize="30dp" />
         <LinearLayout
             android:id="@+id/buttons"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/quest5answer"
+            android:layout_below="@+id/score"
             android:gravity="center_horizontal"
-            android:paddingTop="50dp">
+            android:paddingTop="10dp">
 
 
-        <Button
-            android:id="@+id/buttonCheck"
-            android:layout_width="100dp"
+            <Button
+                android:id="@+id/buttonCheck"
+                android:layout_width="100dp"
 
 
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:onClick="onCheckClick"
+                android:paddingTop="15dp"
+                android:text="@string/buttonCheck" />
 
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:onClick="onCheckClick"
-            android:paddingTop="15dp"
-            android:text="@string/buttonCheck"/>
             <Button
                 android:id="@+id/buttonReset"
                 android:layout_width="100dp"
@@ -303,11 +339,10 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:onClick="Reset"
-                android:paddingTop="15dp"
-                android:text="@string/buttonReset"/>
+                android:paddingTop="20dp"
+                android:text="@string/buttonReset" />
 
         </LinearLayout>
 
-
     </RelativeLayout>
-    </ScrollView>
+</ScrollView>
