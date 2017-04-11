@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChelseaQuiz</string>
+    <string name="buttonCheck">Sprawdź!</string>
+    <string name="quest4_answ1">Tak</string>
+    <string name="quest4_answ2">Nie</string>
+    <string name="question">Czy jesteś prawdziwym kibicem Chelsea? Zaczynajmy!</string>
+    <string name="question1">1. Chelsea została założona w:</string>
+    <string name="question2">2. Jaki przydomek noszą gracze Chelsea?</string>
+    <string name="question3">3. Ile razy Chelsea wygrała ligę angielską?</string>
+    <string name="question4">4. Czy Chelsea w sezonie 2016/2017 uczestniczyłą w lidze mistrzów?</string>
+    <string name="question5">5. Którego z tych skrótów używają kibice Chelsea?</string>
+    <string name="welcome">Witaj w QUIZie dotyczącym Chelsea FC!</string>
+    <string name="youGot">"Zdobyłeś "</string>
+    <string name="pointsoutof">punktów z 5 możliwych. Gratulacje!</string>
+    <string name="buttonReset">Reset!</string>
+</resources>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">ChelseaQuiz</string>
+
+    /welcome
+
+    <string name="welcome">Welcome to QUIZ about Chelsea FC ! </string>
+
+    /question
+
+    <string name="question">Are you a true Chelsea fan ? Lets start!</string>
+
+    /QUESTIONS
+
+    <string name="question1">1. Chelsea FC was founded in:</string>
+    <string name="question2">2. What is the nickname of Chelsea players:</string>
+    <string name="question3">3. How many times Chelsea have won league title ?</string>
+    <string name="question4">4. Did Chelsea participate in 2016/2017 Champions League ?</string>
+    <string name="question5">5. Which one of this shortcuts Chelsea fans are using ?</string>
+
+
+
+
+    /ANSWERS
+    <string name="quest1_answ1" translatable="false">1905</string>
+    <string name="quest1_answ2" translatable="false">1925</string>
+    <string name="quest1_answ3" translatable="false">1915</string>
+    <string name="quest1_answ4" translatable="false">1895</string>
+
+    <string name="quest2_answ1" translatable="false">Blue shirts</string>
+    <string name="quest2_answ2" translatable="false">London boys</string>
+    <string name="quest2_answ3" translatable="false">The Pensioners</string>
+    <string name="quest2_answ4" translatable="false">The Blues</string>
+
+    <string name="quest3_answer" translatable="false"></string>"
+
+    <string name="quest4_answ1">Yes</string>"
+    <string name="quest4_answ2">No</string>"
+
+    <string name="quest5_answ1" translatable="false">KTBFFH</string>
+    <string name="quest5_answ2" translatable="false">GGMU</string>
+    <string name="quest5_answ3" translatable="false">YNWA</string>
+
+
+    /BUTTONS
+    <string name="buttonCheck">Check!</string>
+    <string name="buttonReset">Reset!</string>
+
+
+    /SCORE message
+    <string name="youGot">You got </string>
+    <string name="pointsoutof">points out of 5.\n</string>
+
+
+</resources>
