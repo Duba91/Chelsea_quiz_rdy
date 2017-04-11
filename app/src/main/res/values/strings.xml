@@ -31,7 +31,7 @@
     <string name="quest2_answ3" translatable="false">The Pensioners</string>
     <string name="quest2_answ4" translatable="false">The Blues</string>
 
-    <string name="quest3_answer" translatable="false"></string>"
+    <string name="quest3_answer" translatable="false"> </string>"
 
     <string name="quest4_answ1">Yes</string>"
     <string name="quest4_answ2">No</string>"
