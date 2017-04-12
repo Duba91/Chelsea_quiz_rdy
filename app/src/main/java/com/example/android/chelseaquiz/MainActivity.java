@@ -1,4 +1,3 @@
-
 package com.example.android.chelseaquiz;
 
 import android.graphics.Color;
@@ -11,7 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AbsSpinner;
+
 
 import static com.example.android.chelseaquiz.R.id.pytanie1odp;
 import static com.example.android.chelseaquiz.R.id.pytanie1odp1;
@@ -25,8 +24,7 @@ import static com.example.android.chelseaquiz.R.id.pytanie5odp1;
 import static com.example.android.chelseaquiz.R.id.pytanie5odp2;
 import static com.example.android.chelseaquiz.R.id.pytanie5odp3;
 
-
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     boolean checking = true;
     int result = 0;
@@ -92,7 +90,7 @@ public class MainActivity extends AppCompatActivity{
             Toast.makeText(this, getString(R.string.youGot) + " " + result + " " + getString(R.string.pointsoutof),
                     Toast.LENGTH_LONG).show();
             //showing message on screen
-            String Test = "\n"+ getString(R.string.youGot)+" " + result + " "+ getString(R.string.pointsoutof);
+            String Test = "\n" + getString(R.string.youGot) + " " + result + " " + getString(R.string.pointsoutof);
             displayMessage(Test);
             result = 0;
         }
@@ -218,7 +216,7 @@ public class MainActivity extends AppCompatActivity{
         resetingColors();
 
         //reseting message
-        String test="";
+        String test = "";
         displayMessage(test);
 
 
