@@ -1,3 +1,4 @@
+
 package com.example.android.chelseaquiz;
 
 import android.graphics.Color;
@@ -12,28 +13,41 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AbsSpinner;
 
-import static com.example.android.chelseaquiz.R.id.pytanie1;
 import static com.example.android.chelseaquiz.R.id.pytanie1odp;
-
 import static com.example.android.chelseaquiz.R.id.pytanie1odp1;
 import static com.example.android.chelseaquiz.R.id.pytanie1odp2;
-import static com.example.android.chelseaquiz.R.id.radio;
-import static com.example.android.chelseaquiz.R.string.question1;
+import static com.example.android.chelseaquiz.R.id.pytanie1odp3;
+import static com.example.android.chelseaquiz.R.id.pytanie1odp4;
+import static com.example.android.chelseaquiz.R.id.pytanie4odp;
+import static com.example.android.chelseaquiz.R.id.pytanie4odp1;
+import static com.example.android.chelseaquiz.R.id.pytanie4odp2;
+import static com.example.android.chelseaquiz.R.id.pytanie5odp1;
+import static com.example.android.chelseaquiz.R.id.pytanie5odp2;
+import static com.example.android.chelseaquiz.R.id.pytanie5odp3;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     boolean checking = true;
-    int result=0;
+    int result = 0;
     CheckBox checkBox1;
     CheckBox checkBox2;
     CheckBox checkBox3;
     CheckBox checkBox4;
-
-
-
-
-
+    RadioGroup radioGroup1;
+    RadioButton quest1_answ1;
+    RadioButton quest1_answ2;
+    RadioButton quest1_answ3;
+    RadioButton quest1_answ4;
+    RadioButton quest4_answ1;
+    RadioButton quest4_answ2;
+    RadioButton quest5_answ1;
+    RadioButton quest5_answ2;
+    RadioButton quest5_answ3;
+    RadioGroup radioGroup4;
+    RadioGroup radioGroup5;
+    EditText quest3;
+    String score;
 
 
     @Override
@@ -44,12 +58,29 @@ public class MainActivity extends AppCompatActivity {
         checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
         checkBox3 = (CheckBox) findViewById(R.id.checkBox3);
         checkBox4 = (CheckBox) findViewById(R.id.checkBox4);
-
+        checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
+        quest1_answ1 = (RadioButton) findViewById(pytanie1odp1);
+        quest1_answ2 = (RadioButton) findViewById(pytanie1odp2);
+        quest1_answ3 = (RadioButton) findViewById(pytanie1odp3);
+        quest1_answ4 = (RadioButton) findViewById(pytanie1odp4);
+        quest4_answ1 = (RadioButton) findViewById(pytanie4odp1);
+        quest4_answ2 = (RadioButton) findViewById(pytanie4odp2);
+        quest5_answ1 = (RadioButton) findViewById(pytanie5odp1);
+        quest5_answ2 = (RadioButton) findViewById(pytanie5odp2);
+        quest5_answ3 = (RadioButton) findViewById(pytanie5odp3);
+        quest3 = (EditText) findViewById(R.id.pytanie3odp);
+        radioGroup1 = (RadioGroup) findViewById(pytanie1odp);
+        radioGroup4 = (RadioGroup) findViewById(pytanie4odp);
+        radioGroup5 = (RadioGroup) findViewById(R.id.pytanie5odp);
+        score = getString(R.string.score1);
 
     }
-    public void onCheckClick(View view){
 
-        if (checking){
+    //check button
+    public void onCheckClick(View view) {
+
+
+        if (checking) {
 
             question1Checking();
             question2Checking();
@@ -57,86 +88,81 @@ public class MainActivity extends AppCompatActivity {
             question4Checking();
             question5Checking();
             coloringRightAnswers();
-            RadioGroup radioGroup = (RadioGroup) findViewById(R.id.pytanie1odp);
 
-
-            Toast.makeText(this, getString(R.string.youGot)+" " + result +" " +getString(R.string.pointsoutof),
+            Toast.makeText(this, getString(R.string.youGot) + " " + result + " " + getString(R.string.pointsoutof),
                     Toast.LENGTH_LONG).show();
-            result=0;
-
+            //showing message on screen
+            String Test = "\n"+ getString(R.string.youGot)+" " + result + " "+ getString(R.string.pointsoutof);
+            displayMessage(Test);
+            result = 0;
         }
 
     }
 
-    private void question1Checking(){
-        RadioGroup radioGroup = (RadioGroup) findViewById(pytanie1odp);
-        int checked = radioGroup.getCheckedRadioButtonId();
-
-
+    //question 1
+    private void question1Checking() {
+        int checked = radioGroup1.getCheckedRadioButtonId();
 
         switch (checked) {
             case pytanie1odp1:
 
-                result+=1;
+                result += 1;
                 break;
             case pytanie1odp2:
 
                 break;
-            case R.id.pytanie1odp3:
+            case pytanie1odp3:
 
                 break;
-            case R.id.pytanie1odp4:
+            case pytanie1odp4:
 
                 break;
-
-
-
-
-
 
         }
 
     }
 
+    //question 2
     private void question2Checking() {
-        CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
+
         boolean checkedBox1 = checkBox1.isChecked();
-        CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
         boolean checkedBox2 = checkBox2.isChecked();
-        CheckBox checkBox3= (CheckBox) findViewById(R.id.checkBox3);
         boolean checkedBox3 = checkBox3.isChecked();
-        CheckBox checkBox4 = (CheckBox) findViewById(R.id.checkBox4);
         boolean checkedBox4 = checkBox4.isChecked();
 
 
         if (checkedBox3 && checkedBox4 && !checkedBox1 && !checkedBox2)
-            result+= 1;
+            result += 1;
 
 
     }
 
-    private void question3Checking(){
-        EditText quest3 = (EditText) findViewById(R.id.pytanie3odp);
+    //question 3
+    private void question3Checking() {
+
         String answer = quest3.getText().toString();
-        if (answer.equals("5"))
-            result+=1;
-
-
+        if (answer.equals("5")) {
+            result += 1;
+            quest3.setTextColor(Color.GREEN);
+        } else {
+            quest3.setTextColor(Color.RED);
+        }
 
 
     }
 
+    //question 4
     private void question4Checking() {
 
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.pytanie4odp);
-        int checked = radioGroup.getCheckedRadioButtonId();
+
+        int checked = radioGroup4.getCheckedRadioButtonId();
 
 
         switch (checked) {
-            case R.id.pytanie4odp1:
+            case pytanie4odp1:
 
                 break;
-            case R.id.pytanie4odp2:
+            case pytanie4odp2:
                 result += 1;
                 break;
 
@@ -144,20 +170,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void question5Checking(){
+    //question 5
+    private void question5Checking() {
 
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.pytanie5odp);
-        int checked = radioGroup.getCheckedRadioButtonId();
+        int checked = radioGroup5.getCheckedRadioButtonId();
 
 
         switch (checked) {
-            case R.id.pytanie5odp1:
+            case pytanie5odp1:
                 result += 1;
                 break;
-            case R.id.pytanie5odp2:
+            case pytanie5odp2:
 
                 break;
-            case R.id.pytanie5odp3:
+            case pytanie5odp3:
 
                 break;
 
@@ -165,16 +191,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void Reset(View view){
+    //reset button
+    public void Reset(View view) {
 
         //quest 1,4,5 reset
         RadioGroup radioGroup = (RadioGroup) findViewById(pytanie1odp);
-        RadioGroup radioGroup2 = (RadioGroup) findViewById(R.id.pytanie4odp);
+        RadioGroup radioGroup2 = (RadioGroup) findViewById(pytanie4odp);
         RadioGroup radioGroup3 = (RadioGroup) findViewById(R.id.pytanie5odp);
         radioGroup.clearCheck();
         radioGroup2.clearCheck();
         radioGroup3.clearCheck();
-
 
 
         //quest 2 reset
@@ -184,57 +210,75 @@ public class MainActivity extends AppCompatActivity {
         checkBox4.setChecked(false);
         //question 3 reset
 
-        EditText quest3 = (EditText) findViewById(R.id.pytanie3odp);
-        quest3.setText(" ");
+
+        quest3.setText("");
+        quest3.setTextColor(Color.BLACK);
 
         //coloring reset
         resetingColors();
 
+        //reseting message
+        String test="";
+        displayMessage(test);
+
+
     }
 
-    public void coloringRightAnswers(){
+    //coloring right answers
+    public void coloringRightAnswers() {
 
         //coloring question 1
 
-
+        quest1_answ1.setTextColor(Color.GREEN);
+        quest1_answ2.setTextColor(Color.RED);
+        quest1_answ3.setTextColor(Color.RED);
+        quest1_answ4.setTextColor(Color.RED);
         //coloring question 2
         checkBox1.setTextColor(Color.RED);
         checkBox2.setTextColor(Color.RED);
         checkBox3.setTextColor(Color.GREEN);
         checkBox4.setTextColor(Color.GREEN);
-        //coloring questio 3
+        //coloring question 3 (in method)
+        //coloring question 4
+        quest4_answ1.setTextColor(Color.RED);
+        quest4_answ2.setTextColor(Color.GREEN);
 
-
-
-
-        //coloring questio 4
-
-        //coloring questio 5
+        //coloring question 5
+        quest5_answ1.setTextColor(Color.GREEN);
+        quest5_answ2.setTextColor(Color.RED);
+        quest5_answ3.setTextColor(Color.RED);
 
 
     }
-    public void resetingColors(){
+
+    //reseting colors with reset button
+    public void resetingColors() {
 
         //coloring question 1
-
-
+        quest1_answ1.setTextColor(Color.BLACK);
+        quest1_answ2.setTextColor(Color.BLACK);
+        quest1_answ3.setTextColor(Color.BLACK);
+        quest1_answ4.setTextColor(Color.BLACK);
 
         //coloring question 2
         checkBox1.setTextColor(Color.BLACK);
         checkBox2.setTextColor(Color.BLACK);
         checkBox3.setTextColor(Color.BLACK);
         checkBox4.setTextColor(Color.BLACK);
-        //coloring questio 3
-
-
-
-
+        //coloring questio 3 (in method)
         //coloring questio 4
-
+        quest4_answ1.setTextColor(Color.BLACK);
+        quest4_answ2.setTextColor(Color.BLACK);
         //coloring questio 5
+        quest5_answ1.setTextColor(Color.BLACK);
+        quest5_answ2.setTextColor(Color.BLACK);
+        quest5_answ3.setTextColor(Color.BLACK);
     }
 
+    private void displayMessage(String message) {
+        TextView summaryScoreView = (TextView) findViewById(R.id.score);
+        summaryScoreView.setText(message);
+        summaryScoreView.setTextColor(Color.WHITE);
 
+    }
 }
-
-
