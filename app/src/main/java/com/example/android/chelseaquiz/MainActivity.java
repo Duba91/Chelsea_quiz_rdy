@@ -27,7 +27,7 @@ import static com.example.android.chelseaquiz.R.id.pytanie5odp3;
 public class MainActivity extends AppCompatActivity {
 
     boolean checking = true;
-    int result = 0;
+    int result ;
     CheckBox checkBox1;
     CheckBox checkBox2;
     CheckBox checkBox3;
@@ -218,7 +218,6 @@ public class MainActivity extends AppCompatActivity {
         //reseting message
         String test = "";
         displayMessage(test);
-
 
     }
 
