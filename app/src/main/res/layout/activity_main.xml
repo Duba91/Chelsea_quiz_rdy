@@ -30,7 +30,7 @@
                 android:gravity="center"
 
                 android:text="@string/welcome"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -50,7 +50,7 @@
                 android:gravity="center"
 
                 android:text="@string/question"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <!--pytanie 1-->
@@ -73,7 +73,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="20dp"
                 android:text="@string/question1"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <RadioGroup
                 android:id="@+id/pytanie1odp"
@@ -129,7 +129,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="20dp"
                 android:text="@string/question2"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/pytanie2odp"
@@ -186,7 +186,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="20dp"
                 android:text="@string/question3"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/pytanie3odp"
@@ -217,7 +217,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="20dp"
                 android:text="@string/question4"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <RadioGroup
                 android:id="@+id/pytanie4odp"
@@ -265,7 +265,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="20dp"
                 android:text="@string/question5"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <RadioGroup
                 android:id="@+id/pytanie5odp"
@@ -305,7 +305,7 @@
             android:gravity="center"
             android:paddingTop="20dp"
             android:text=""
-            android:textSize="30dp" />
+            android:textSize="30sp" />
         <LinearLayout
             android:id="@+id/buttons"
             android:layout_width="match_parent"
